@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer Dashboard | AAROHAN 2026</title>
+    <link rel="stylesheet" href="css/organizer.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LOGIN SCREEN
+    ========================== -->
+    <div id="loginScreen" class="login-page">
+        <div class="login-card">
+            <img src="images/logo.png" alt="AAROHAN Logo">
+            <p class="login-brand">AAROHAN <span>2026</span></p>
+            <h1>Organizer Login</h1>
+            <p class="login-subtitle">Sign in to manage AAROHAN events</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username" autocomplete="username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" autocomplete="current-password" required>
+                </div>
+
+                <p id="loginError" class="login-error"></p>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- =========================
+         ORGANIZER DASHBOARD
+    ========================== -->
+    <div id="dashboard" class="dashboard-page hidden">
+
+        <!-- HEADER -->
+        <header class="organizer-header">
+            <div class="brand">
+                <img src="images/logo.png" alt="AAROHAN Logo">
+                <div>
+                    <h1>AAROHAN <span>2026</span></h1>
+                    <p>Organizer Dashboard</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="organizer-profile">
+                    <div class="profile-icon">A</div>
+                    <div>
+                        <strong>Admin</strong>
+                        <small>Organizer</small>
+                    </div>
+                </div>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-container">
+
+            <!-- WELCOME SECTION -->
+            <section class="welcome-section">
+                <div>
+                    <p class="welcome-label">ORGANIZER PANEL</p>
+                    <h2>Hello, <span>Admin</span>! 👋</h2>
+                    <p class="welcome-text">Here's a live overview of AAROHAN 2026 registrations.</p>
+                </div>
+                <div class="date-box">
+                    <span id="currentDate"></span>
+                </div>
+            </section>
+
+
+            <!-- STATISTICS METRICS -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div>
+                        <p>Total Participants</p>
+                        <h3 id="participantCount">3</h3>
+                        <span>Unique candidates</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🎟️</div>
+                    <div>
+                        <p>Total Registrations</p>
+                        <h3 id="registrationCount">4</h3>
+                        <span>Across all 3 events</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div>
+                        <p>Active Events</p>
+                        <h3 id="eventCount">3</h3>
+                        <span>Flagship Competitions</span>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- CONTENT GRID -->
+            <section class="content-grid">
+
+                <!-- 3 EVENT BREAKDOWN -->
+                <div class="dashboard-card events-card" id="eventsSection">
+                    <div class="card-header">
+                        <div>
+                            <p class="card-label">COMPETITION TALLIES</p>
+                            <h3>Event Registrations</h3>
+                        </div>
+                        <span class="event-badge">3 Events</span>
+                    </div>
+
+                    <div id="eventList" class="event-list">
+                        <div class="event-row">
+                            <div class="event-number">1</div>
+                            <div class="event-info">
+                                <h4>Code Quest</h4>
+                                <p>Competitive Programming</p>
+                            </div>
+                            <div class="event-participants">
+                                <strong>2</strong>
+                                <span>registrations</span>
+                            </div>
+                        </div>
+                        <div class="event-row">
+                            <div class="event-number">2</div>
+                            <div class="event-info">
+                                <h4>RoboRace</h4>
+                                <p>Robotics Competition</p>
+                            </div>
+                            <div class="event-participants">
+                                <strong>1</strong>
+                                <span>registrations</span>
+                            </div>
+                        </div>
+                        <div class="event-row">
+                            <div class="event-number">3</div>
+                            <div class="event-info">
+                                <h4>CTF</h4>
+                                <p>Capture the Flag</p>
+                            </div>
+                            <div class="event-participants">
+                                <strong>1</strong>
+                                <span>registrations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TO-DO LIST -->
+                <div class="dashboard-card todo-card">
+                    <div class="card-header">
+                        <div>
+                            <p class="card-label">ORGANIZER TASKS</p>
+                            <h3>My To-Do List</h3>
+                        </div>
+                        <span id="todoCount" class="todo-count">2</span>
+                    </div>
+
+                    <div class="todo-input">
+                        <input type="text" id="todoInput" placeholder="Add a new task...">
+                        <button id="addTodoBtn" type="button">+</button>
+                    </div>
+
+                    <ul id="todoList">
+                        <li class="todo-item completed">
+                            <input type="checkbox" checked class="todo-checkbox">
+                            <span class="todo-text">Confirm event judges</span>
+                            <button class="delete-todo">×</button>
+                        </li>
+                        <li class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <span class="todo-text">Check venue arrangements</span>
+                            <button class="delete-todo">×</button>
+                        </li>
+                        <li class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <span class="todo-text">Prepare participant certificates</span>
+                            <button class="delete-todo">×</button>
+                        </li>
+                    </ul>
+
+                    <button id="clearCompletedBtn" class="clear-btn" type="button">Clear Completed</button>
+                </div>
+
+            </section>
+
+
+            <!-- PARTICIPANT ROSTER TABLE -->
+            <section class="dashboard-card roster-section" id="rosterSection">
+                <div class="card-header">
+                    <div>
+                        <p class="card-label">LIVE DATA FEED</p>
+                        <h3>Registered Participants List</h3>
+                    </div>
+                    <span id="rosterBadge" class="event-badge">3 Records</span>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="roster-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Mobile</th>
+                                <th>Email</th>
+                                <th>Events Selected</th>
+                            </tr>
+                        </thead>
+                        <tbody id="participantTableBody">
+                            <tr>
+                                <tr>
+                                <td>2</td>
+                                <td><strong>Vedha</strong></td>
+                                <td>CSE</td>
+                                <td>9656258090</td>
+                                <td>vedha@gmail.com</td>
+                                <td><span class="table-event-tag">Capture the Flag (CTF)</span></td>
+                            </tr>
+                                <td>1</td>
+                                <td><strong>Rahul Nair</strong></td>
+                                <td>ME</td>
+                                <td>9447123456</td>
+                                <td>rahul.nair@gmail.com</td>
+                                <td><span class="table-event-tag">RoboRace, Code Quest</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Arjun Kumar</strong></td>
+                                <td>ECE</td>
+                                <td>9876543210</td>
+                                <td>arjun@gmail.com</td>
+                                <td><span class="table-event-tag">Code Quest</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 AAROHAN | Organizer Dashboard</p>
+        </footer>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

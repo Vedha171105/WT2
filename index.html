@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAROHAN 2026 - Engineering Tomorrow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="AAROHAN Logo" width="65">
+            <h1>AAROHAN 2026</h1>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="nav-toggle-check" class="nav-toggle-check">
+            <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="images/banner.png" alt="AAROHAN 2026 Banner"
+            onerror="this.onerror=null; this.src='images/banner_aarohan.jfif';">
+        <div class="banner-overlay"></div>
+    </section>
+
+    <main>
+        <!-- FRAME 1: About (Left) + Event Highlights & Announcements Stacked (Right) -->
+        <section class="frame1-grid">
+            
+            <div class="card about-card">
+                <p id="user-greeting-tag" class="user-greeting-tag hidden"></p>
+                <h2>About AAROHAN 2026</h2>
+                <p>AAROHAN 2026 is the annual flagship technical festival organized by the Department of Computer
+                    Science and Engineering. The event brings together students, innovators, developers, designers,
+                    and technology enthusiasts from various colleges to compete, collaborate, and showcase their
+                    talents.</p>
+                <p>Participants can engage in exciting competitions, technical workshops, cybersecurity challenges,
+                    and robotics events while networking with industry experts.</p>
+                <a href="register.html" class="btn-primary" style="margin-top: 15px; align-self: flex-start;">Join AAROHAN 2026</a>
+            </div>
+
+            <div class="right-stack">
+                <div class="card stack-card highlight-card">
+                    <h3>Event Highlights</h3>
+                    <ul class="clean-list">
+                        <li>🚀 <strong>Flagship Hackathon:</strong> 24-hr building sprint.</li>
+                        <li>🧠 <strong>AI & Tech Keynotes:</strong> Industry expert talks.</li>
+                        <li>🏆 <strong>Cash Prizes:</strong> ₹60,000+ total pool.</li>
+                    </ul>
+                </div>
+
+                <div class="card stack-card announcement-card">
+                    <h3>Announcements</h3>
+                    <ul class="clean-list">
+                        <li><span class="announcement-badge badge-mint">New</span> Registration starts on <strong>14 July 2026!!</strong></li>
+                        <li><span class="announcement-badge badge-sky">Notice</span> Certificates for all participants.</li>
+                        <li><span class="announcement-badge badge-coral">Awards</span> Cash prizes, trophies & internships.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FRAME 2: Upcoming Events Container with 3 Vertical Event Cards -->
+        <section class="frame2-container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="upcoming-events-grid">
+                <div class="card event-card">
+                    <img src="images/event1.png" alt="Coding Quest">
+                    <h3>Coding Quest</h3>
+                    <p class="tagline">Think Smart, Code Fast!</p>
+                    <p>A competitive programming contest where participants solve real-world coding challenges using
+                        logical thinking and programming skills.</p>
+                    <p class="prize"><em>PRIZE POOL:</em> <i>₹15,000</i></p>
+                    <a href="register.html" class="btn-learn-more">Learn More &rarr;</a>
+                </div>
+
+                <div class="card event-card">
+                    <img src="images/event3.png" alt="RoboRace">
+                    <h3>RoboRace</h3>
+                    <p class="tagline">Gear Up, Power On!</p>
+                    <p>Design, build, and race autonomous or manually controlled robots through challenging tracks
+                        filled with obstacles.</p>
+                    <p class="prize"><em>PRIZE POOL:</em> <i>₹20,000</i></p>
+                    <a href="register.html" class="btn-learn-more">Learn More &rarr;</a>
+                </div>
+
+                <div class="card event-card">
+                    <img src="images/event2.png" alt="CTF">
+                    <h3>Capture The Flag (CTF)</h3>
+                    <p class="tagline">Cyber Challenge</p>
+                    <p>An exciting cybersecurity competition involving cryptography, web exploitation, reverse
+                        engineering, digital forensics, and network security.</p>
+                    <p class="prize"><em>PRIZE POOL:</em> <i>₹25,000</i></p>
+                    <a href="register.html" class="btn-learn-more">Learn More &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="frame3-container">
+            <div class="team-layout">
+                <!-- Left Side: Section Title + Main Faculty Lead Card -->
+                <div class="team-lead-column">
+                    <h2 class="team-title">MEET THE TEAM</h2>
+                    
+                    <div class="team-card">
+                        <div class="avatar-circle">
+                            <img src="images/faculty_anita.jpg" alt="Dr. Anita Joseph" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80';">
+                        </div>
+                        <div class="card-info">
+                            <h4>Dr. Anita Joseph</h4>
+                            <p class="role">Faculty Coordinator</p>
+                            <p class="dept">Professor, CSE Dept.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: 2x2 Grid of Student Coordinators -->
+                <div class="team-grid-column">
+                    <!-- Card 1 -->
+                    <div class="team-card">
+                        <div class="avatar-circle">
+                            <img src="images/student_rahul.jpg" alt="Rahul Menon" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80';">
+                        </div>
+                        <div class="card-info">
+                            <h4>Rahul Menon</h4>
+                            <p class="role">Event Head</p>
+                            <p class="dept">Student Coordinator</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="team-card">
+                        <div class="avatar-circle">
+                            <img src="images/student_sneha.jpg" alt="Sneha Nair" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80';">
+                        </div>
+                        <div class="card-info">
+                            <h4>Sneha Nair</h4>
+                            <p class="role">Technical Head</p>
+                            <p class="dept">Student Coordinator</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="team-card">
+                        <div class="avatar-circle">
+                            <img src="images/student_akhil.jpg" alt="Akhil Krishna" onerror="this.onerror=null; this.src='images/placeholder-user.jpg'; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80';">
+                        </div>
+                        <div class="card-info">
+                            <h4>Akhil Krishna</h4>
+                            <p class="role">Registration Head</p>
+                            <p class="dept">Student Coordinator</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="team-card">
+                        <div class="avatar-circle">
+                            <img src="images/student_ananya.jpg" alt="Ananya R." onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80';">
+                        </div>
+                        <div class="card-info">
+                            <h4>Ananya R.</h4>
+                            <p class="role">Publicity Head</p>
+                            <p class="dept">Student Coordinator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FRAME 4: Sponsors (Featured Title Sponsor + Rolling Marquee) -->
+        <section class="frame4-container">
+            <h2 class="sponsors-title">OUR SPONSORS</h2>
+
+            <!-- Rolling Sponsor Banner -->
+            <div class="rolling-sponsors-wrapper">
+                <div class="sponsor-slider">
+                    <div class="sponsor-track">
+                        <div class="sponsor-card">
+                            <img src="images/technova.png" alt="TechNova Solutions">
+                            <p>TechNova Solutions</p>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="images/codesphere.png" alt="CodeSphere Technologies">
+                            <p>CodeSphere Technologies</p>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="images/cybershield.png" alt="CyberShield Pvt. Ltd.">
+                            <p>CyberShield Pvt. Ltd.</p>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="images/dsc.png" alt="Developer Students Club">
+                            <p>Developer Students Club</p>
+                        </div>
+
+                        <!-- Duplicate set for seamless continuous marquee loop -->
+                        <div class="sponsor-card">
+                            <img src="images/technova.png" alt="TechNova Solutions">
+                            <p>TechNova Solutions</p>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="images/codesphere.png" alt="CodeSphere Technologies">
+                            <p>CodeSphere Technologies</p>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="images/cybershield.png" alt="CyberShield Pvt. Ltd.">
+                            <p>CyberShield Pvt. Ltd.</p>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="images/dsc.png" alt="Developer Students Club">
+                            <p>Developer Students Club</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="register.html" class="register-btn">Register Now</a>
+    <a href="#" class="back-to-top" aria-label="Back to top">&#9650;</a>
+
+    <footer>
+        <p>AAROHAN 2026 <br><i>Engineering Tomorrow</i></p>
+        <p>ABC College of Engineering<br><strong>CONTACT US:</strong><br><strong>Email:</strong>
+            aarohan2026@abccollege.edu<br><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Follow Us:</strong> Facebook | Instagram | LinkedIn | YouTube</p>
+        <p>© 2026 AAROHAN. All Rights Reserved.</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Events - AAROHAN 2026</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="AAROHAN Logo" width="65">
+            <h1>AAROHAN 2026</h1>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="nav-toggle-check" class="nav-toggle-check">
+            <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+        <main class="events-main-container">
+            <!-- TOP SECTION GRID: Left (Events + 3 Cards) | Right Stack (Steps & Categories) -->
+            <div class="events-top-grid">
+              
+                <!-- Left: Events Block with Carousel -->
+                <section class="events-wrapper-card">
+                    <div class="events-left-section">
+                        <h2 class="events-section-title">EVENTS</h2>
+                        
+                        <div class="carousel-wrapper">
+                            <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Slide">&#10094;</button>
+                            
+                            <div class="carousel-track-container">
+                                <div class="carousel-track" id="carouselTrack">
+                                    
+                                    <!-- Event Card 1 -->
+                                    <div class="event-item-card">
+                                        <img src="images/event1.png" alt="Coding Contest">
+                                        <h3>Code Quest</h3>
+                                        <span class="tagline">Speed & Logic</span>
+                                        <p>Test your algorithmic skills against top minds in a timed challenge.</p>
+                                        <div class="prize">Prize: <i>₹15,000</i></div>
+                                    </div>
+
+                                    <!-- Event Card 2 -->
+                                    <div class="event-item-card">
+                                        <img src="images/event2.png" alt="Hackathon">
+                                        <h3>CTF</h3>
+                                        <span class="tagline">Capture the Flag</span>
+                                        <p>An exciting cybersecurity competition involving cryptography, web exploitation, reverse engineering, digital forensics, and network security.</p>
+                                        <div class="prize">Prize: <i>₹30,000</i></div>
+                                    </div>
+
+                                    <!-- Event Card 3 -->
+                                    <div class="event-item-card">
+                                        <img src="images/event3.png" alt="Web Design">
+                                        <h3>RoboRace</h3>
+                                        <span class="tagline">Gear Up, Power On!</span>
+                                        <p>Design, build, and race autonomous or manually controlled robots through challenging tracks filled with obstacles.</p>
+                                        <div class="prize">Prize: <i>₹10,000</i></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next Slide">&#10095;</button>
+                        </div>
+
+                        <!-- Pagination Indicator Dots -->
+                        <div class="carousel-dots" id="carouselDots"></div>
+                    </div>
+                </section>
+
+                <!-- Right Stack: Steps to Reg & Event Categories -->
+                <div class="events-sidebar-stack">
+                    
+                    <!-- Steps to Register Card -->
+                    <section class="sidebar-card">
+                        <h2>Steps to REGISTER</h2>
+                        <ol class="steps-list">
+                            <li>Register Online</li>
+                            <li>Select Events</li>
+                            <li>Pay Registration Fee</li>
+                            <li>Registration CONFIRMED!!</li>
+                        </ol>
+                    </section>
+
+                    <!-- Event Categories Card -->
+                    <section class="sidebar-card">
+                        <h2>EVENT Categories</h2>
+                        <div class="categories-list">
+                            <div class="category-group">
+                                <h3>Technical</h3>
+                                <ul>
+                                    <li>Coding Contest</li>
+                                    <li>Hackathon</li>
+                                    <li>Web Design</li>
+                                </ul>
+                            </div>
+                            <div class="category-group">
+                                <h3>Non Technical</h3>
+                                <ul>
+                                    <li>Photography</li>
+                                    <li>Quiz</li>
+                                    <li>Treasure Hunt</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- BOTTOM SECTION: Event Schedule (Full Width Container) -->
+            <section class="schedule-section">
+                <h2>EVENT SCHEDULE</h2>
+                <div class="table-container">
+                    <table>
+                        <caption>AAROHAN 2026 Schedule</caption>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Event</th>
+                                <th>Venue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>9:00 AM</td>
+                                <td>Inauguration</td>
+                                <td>Auditorium</td>
+                            </tr>
+                            <tr>
+                                <td>10:00 AM</td>
+                                <td>Code Quest</td>
+                                <td>Lab 1</td>
+                            </tr>
+                            <tr>
+                                <td>11:30 AM</td>
+                                <td>RoboRace</td>
+                                <td>OAT</td>
+                            </tr>
+                            <tr class="break-row">
+                                <td colspan="3">Lunch Break</td>
+                            </tr>
+                            <tr>
+                                <td>2:00 PM</td>
+                                <td>CTF</td>
+                                <td>Lab 2</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">End of Day 1 Schedule</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <a href="register.html" class="register-btn">Register Now</a>
+        <a href="#" class="back-to-top" aria-label="Back to top">&#9650;</a>
+
+        <footer>
+            <p>AAROHAN 2026 <br><i>Engineering Tomorrow</i></p>
+            <p>ABC College of Engineering<br><strong>CONTACT US:</strong><br><strong>Email:</strong> aarohan2026@abccollege.edu<br><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Follow Us:</strong> Facebook | Instagram | LinkedIn | YouTube</p>
+            <p>© 2026 AAROHAN. All Rights Reserved.</p>
+        </footer>
+        <script src="js/app.js"></script>
+    </body>
+</html>
